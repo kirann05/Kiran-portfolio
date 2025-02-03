@@ -1,0 +1,984 @@
+/* Logo and Header Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mini-logo {
+    background: #4c5c96;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+#header h1 a {
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Banner Styles */
+.author-info {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main-profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.author-name {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.author-name::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #4c5c96;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4c5c96;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Banner Profile Styles */
+.banner-profile {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 736px) {
+    .mini-logo {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+    
+    #header h1 {
+        font-size: 1.2rem;
+    }
+
+    .main-profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    .author-name {
+        font-size: 2em;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .banner-profile {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Project Image Styles */
+.project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: translateY(-5px);
+}
+
+.project-image img {
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 250px;
+    filter: brightness(0.9); /* Slightly darken the image to match theme */
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.project-image img[alt="Cloud Architecture"] {
+    object-position: center 30%; /* Adjust to show the most important part of the diagram */
+    filter: brightness(0.95) contrast(1.1); /* Enhance the visibility of the diagram */
+}
+
+.project-image:hover img[alt="Cloud Architecture"] {
+    filter: brightness(1) contrast(1.1);
+}
+
+/* Project Article Styles */
+.features article {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2em;
+    margin-bottom: 2em;
+    transition: all 0.3s ease;
+    border-left: 4px solid #6c8aec;
+}
+
+.features article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* GitHub Icon Styles */
+.project-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(108, 138, 236, 0.2);
+}
+
+.github-icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover .github-icon {
+    transform: scale(1.1);
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Todo Project Styles */
+.quote {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #888;
+    border-left: 3px solid #4c5c96;
+    padding-left: 1em;
+    margin: 1.5em 0;
+}
+
+.features article h4 {
+    color: #4c5c96;
+    margin-top: 1.5em;
+}
+
+.features article p {
+    margin-bottom: 1em;
+}
+
+.features article ul {
+    list-style: none;
+    padding-left: 1em;
+}
+
+.features article ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Contact Bar Styles */
+.contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.contact-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.contact-item i {
+    font-size: 1.2em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+    .contact-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Contact Icons Styles */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.contact-icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+    .contact-icons {
+        gap: 1.5rem;
+    }
+    
+    .contact-icon {
+        font-size: 1.3em;
+    }
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem 0;
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.icon-separator {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8em;
+}
+
+/* Shine effect */
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.social-icon:hover .shine:after {
+    opacity: 1;
+    left: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 736px) {
+    .social-icons {
+        gap: 1rem;
+    }
+    
+    .social-icon {
+        font-size: 1.2em;
+    }
+}
+
+/* Truth Detector Project Styles */
+.project-intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #e6e6e6;
+    margin-bottom: 2em;
+    border-left: 3px solid #4c5c96;
+    padding-left: 1em;
+}
+
+.feature-section, .tech-section {
+    margin: 2em 0;
+}
+
+.feature-list, .tech-list {
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+.feature-list li, .tech-list li {
+    margin-bottom: 0.8em;
+    position: relative;
+}
+
+.feature-list li:before {
+    content: '→';
+    position: absolute;
+    left: -1.5em;
+    color: #4c5c96;
+}
+
+.tech-list li strong {
+    color: #4c5c96;
+}
+
+.project-conclusion {
+    font-style: italic;
+    margin: 2em 0;
+    color: #d4d4d4;
+    text-align: justify;
+}
+
+.features article h4 {
+    color: #4c5c96;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Cloud Architecture Project Styles */
+.tech-stack-list, .metrics-list {
+    list-style: none;
+    padding-left: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.tech-stack-list li, .metrics-list li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.tech-stack-list li:before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: #4c5c96;
+}
+
+.metrics-list li:before {
+    content: '📈';
+    position: absolute;
+    left: 0;
+    color: #4c5c96;
+}
+
+.metrics-section {
+    margin: 2em 0;
+    padding: 1em;
+    background: rgba(76, 92, 150, 0.1);
+    border-radius: 8px;
+}
+
+.project-intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #e6e6e6;
+    margin: 1.5em 0;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #4c5c96;
+}
+
+/* Work Experience Styles */
+.work-experience {
+    padding: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #4c5c96;
+    margin-bottom: 2rem;
+    font-size: 2em;
+}
+
+.experience-card {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #6c8aec;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.experience-header {
+    margin-bottom: 1em;
+}
+
+.experience-header h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    color: #4c5c96;
+    font-size: 1.1em;
+    margin-bottom: 0.3rem;
+}
+
+.duration {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.journey-intro {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(76, 92, 150, 0.1);
+    border-radius: 8px;
+}
+
+.key-achievements, .research-impact {
+    margin: 1.5rem 0;
+}
+
+.key-achievements h4, .research-impact h4 {
+    color: #4c5c96;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.key-achievements ul, .research-impact ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.key-achievements li, .research-impact li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+}
+
+.key-achievements li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #4c5c96;
+}
+
+.research-impact li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4c5c96;
+}
+
+.journey-conclusion {
+    margin-top: 2rem;
+    font-style: italic;
+    color: #d4d4d4;
+    padding: 1rem;
+    border-left: 3px solid #4c5c96;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 736px) {
+    .experience-card {
+        padding: 1.2em;
+    }
+    
+    .journey-intro, .journey-conclusion {
+        padding: 0.8em;
+    }
+}
+
+/* Project Title and Heading Styles */
+.features article h3.major {
+    color: #6c8aec;
+    font-size: 1.8em;
+    margin: 0.5em 0 1em;
+    text-shadow: 0 0 15px rgba(108, 138, 236, 0.3);
+}
+
+.features article:hover h3.major {
+    color: #8aa3f3;  /* Lighter blue on hover */
+}
+
+.features article h4 {
+    background: linear-gradient(45deg, #4c5c96, #6c8aec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+    margin: 1em 0 0.8em;
+    padding: 0;
+}
+
+/* Section Headers */
+.section-title {
+    color: #6c8aec;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(108, 138, 236, 0.4);
+}
+
+/* Experience Card Headers */
+.experience-header h3 {
+    color: #6c8aec;
+    font-size: 1.6em;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(108, 138, 236, 0.3);
+}
+
+.company {
+    color: #8aa3f3;
+    font-size: 1.2em;
+    margin-bottom: 0.3rem;
+}
+
+/* Key Features and Achievements */
+.key-achievements h4, 
+.research-impact h4,
+.tech-section h4 {
+    background: linear-gradient(45deg, #4c5c96, #6c8aec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+/* List Item Markers */
+.feature-list li:before,
+.tech-stack-list li:before,
+.metrics-list li:before,
+.key-achievements li:before,
+.research-impact li:before {
+    color: #6c8aec;
+}
+
+/* Strong Text in Lists */
+.tech-list li strong,
+.feature-list li strong {
+    color: #8aa3f3;
+}
+
+/* Project Intro and Conclusion */
+.project-intro,
+.journey-intro {
+    margin: 1em 0;
+    padding: 1em;
+    background: rgba(108, 138, 236, 0.05);
+    border-left: 4px solid #6c8aec;
+    border-radius: 4px;
+}
+
+.project-conclusion,
+.journey-conclusion {
+    margin: 1em 0;
+    padding: 1em;
+    font-style: italic;
+    color: #d4d4d4;
+    border-left: 3px solid #6c8aec;
+}
+
+/* Hover Effects */
+.experience-card:hover,
+.features article:hover {
+    border-left-color: #8aa3f3;
+    box-shadow: 0 6px 12px rgba(108, 138, 236, 0.2);
+}
+
+/* Metrics Section */
+.metrics-section {
+    background: rgba(108, 138, 236, 0.05);
+    border-left: 4px solid #6c8aec;
+}
+
+/* Clean Professional Layout */
+.features article {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2em;
+    margin-bottom: 2em;
+    transition: all 0.3s ease;
+    border-left: 4px solid #6c8aec;
+}
+
+/* Title Styles */
+.features article h3.major {
+    color: #6c8aec;
+    font-size: 1.8em;
+    margin: 0.5em 0 1em;
+    text-shadow: 0 0 15px rgba(108, 138, 236, 0.3);
+}
+
+/* Subheading Styles */
+.features article h4 {
+    background: linear-gradient(45deg, #4c5c96, #6c8aec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+    margin: 1em 0 0.8em;
+    padding: 0;
+}
+
+/* List Styles - No Bullets */
+.feature-list,
+.tech-stack-list,
+.metrics-list,
+.key-achievements ul,
+.research-impact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0;
+}
+
+.feature-list li,
+.tech-stack-list li,
+.metrics-list li,
+.key-achievements li,
+.research-impact li {
+    padding: 0.4em 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Remove bullet point symbols */
+.feature-list li:before,
+.tech-stack-list li:before,
+.metrics-list li:before,
+.key-achievements li:before,
+.research-impact li:before {
+    content: none;
+}
+
+/* Section Spacing */
+.feature-section,
+.tech-section,
+.metrics-section {
+    margin: 1.5em 0;
+}
+
+/* Experience Cards */
+.experience-card {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #6c8aec;
+}
+
+.experience-header {
+    margin-bottom: 1em;
+}
+
+.experience-content {
+    padding: 0;
+}
+
+/* Strong Text Emphasis */
+strong {
+    color: #8aa3f3;
+    font-weight: 600;
+}
+
+/* GitHub Icon Alignment */
+.project-links {
+    margin-top: 1.5em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(108, 138, 236, 0.2);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 736px) {
+    .features article {
+        padding: 1.5em;
+    }
+    
+    .project-intro,
+    .journey-intro,
+    .project-conclusion,
+    .journey-conclusion {
+        padding: 0.8em;
+    }
+    
+    .experience-card {
+        padding: 1.2em;
+    }
+}
+
+.achievement-text {
+    color: #e6e6e6;
+    line-height: 1.6;
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+}
+
+/* Project Media Container */
+.project-media {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+/* Video Preview Button */
+.video-preview-btn {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    background: rgba(108, 138, 236, 0.9);
+    color: white;
+    border: none;
+    padding: 0.7em 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    backdrop-filter: blur(5px);
+}
+
+.video-preview-btn:hover {
+    background: rgba(108, 138, 236, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.video-preview-btn i {
+    font-size: 1.2em;
+}
+
+/* Video Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-video {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-video:hover {
+    color: #6c8aec;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 736px) {
+    .video-preview-btn {
+        bottom: 0.8em;
+        right: 0.8em;
+        padding: 0.5em 1em;
+        font-size: 0.8em;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+    
+    .close-video {
+        right: 0;
+        top: -30px;
+    }
+} 
