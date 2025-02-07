@@ -16,6 +16,24 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<meta name="description" content="Kiran Gandluri - Software Engineer Portfolio | AI & Healthcare Technology">
+		<meta name="keywords" content="Kiran Gandluri, Software Engineer, AI, Healthcare Technology, Full Stack Developer">
+		<meta name="author" content="Kiran Gandluri">
+		
+		<!-- Open Graph tags for social media -->
+		<meta property="og:title" content="Kiran Gandluri - Portfolio">
+		<meta property="og:description" content="Software Engineer specializing in AI & Healthcare Technology">
+		<meta property="og:image" content="images/profile.jpg">
+		<meta property="og:url" content="https://kirann05.github.io">
+
+		<!-- Add this before </head> -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'YOUR-GA-ID');
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -315,20 +333,23 @@
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 							<p>Feel free to reach out to me for any professional opportunities or collaborations.</p>
-							<form method="post" action="#">
+							<form action="https://formsubmit.co/kirangandluri1@gmail.com" method="POST">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="name" id="name" required />
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<input type="email" name="email" id="email" required />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+										<textarea name="message" id="message" rows="4" required></textarea>
 									</div>
+									<input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+									<input type="hidden" name="_template" value="table">
+									<input type="hidden" name="_next" value="https://kirann05.github.io/thank-you.html">
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
